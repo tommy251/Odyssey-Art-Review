@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="art-gallery">
+    {% for art in artworks %}
+    <div class="art-item">
+        <img src="{{ url_for('static', filename='images/' + art.image) }}" alt="{{ art.name }}">
+        <h3>{{ art.name }}</h3>
+        <p>{{ art.artist }} ({{ art.year }})</p>
+        <div class="buttons">
+            <button class="admire-btn">Admire</button>
+            <button class="dislike-btn">Dislike</button>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
