@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from vercel import Vercel
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -32,8 +30,6 @@ def dislike():
     artwork_name = data.get('artwork_name')
     return jsonify({"status": "success", "message": f"You disliked {artwork_name}!"})
 
-# Vercel serverless handler
-vercel_handler = Vercel(app)
 
 if __name__ == '__main__':
     app.run(debug=True)
