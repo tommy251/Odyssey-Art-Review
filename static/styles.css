@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    font-family: 'Cinzel', serif; /* Rare classical font */
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* White text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.art-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.art-item {
+    background-color: #2a2a2a; /* Darker background for art items */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 300px;
+}
+
+.art-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+}
+
+.art-item h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+}
+
+.art-item p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #cccccc; /* Light gray text */
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons .admire-btn {
+    background-color: #4CAF50; /* Green */
+    color: #ffffff;
+}
+
+.buttons .admire-btn:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.buttons .dislike-btn {
+    background-color: #f44336; /* Red */
+    color: #ffffff;
+}
+
+.buttons .dislike-btn:hover {
+    background-color: #e53935; /* Darker red */
+}
+
+/* Footer Styles */
+footer {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+footer video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .art-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .art-item {
+        max-width: 100%;
+    }
+}
